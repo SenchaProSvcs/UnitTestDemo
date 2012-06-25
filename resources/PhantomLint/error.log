@@ -1,0 +1,294 @@
+assets/phantomjs-1.5.0/examples/detectsniff.js
+    Line #: 31
+    Char #: 11
+    Reason: Move the invocation into the parens that contain the function.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 19
+    Char #: 61
+    Reason: Insecure '.'.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 20
+    Char #: 23
+    Reason: Expected '===' and instead saw '=='.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 25
+    Char #: 40
+    Reason: Unexpected '\'.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 26
+    Char #: 41
+    Reason: Insecure '.'.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 30
+    Char #: 61
+    Reason: Insecure '.'.
+
+
+assets/phantomjs-1.5.0/examples/direction.js
+    Line #: 30
+    Char #: 101
+    Reason: Insecure '.'.
+
+
+assets/phantomjs-1.5.0/examples/imagebin.js
+    Line #: 16
+    Char #: 75
+    Reason: Expected ';' and instead saw 'document'.
+
+
+assets/phantomjs-1.5.0/examples/ipgeocode.js
+    Line #: 6
+    Char #: 9
+    Reason: Expected '{' and instead saw 'loc'.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 25
+    Char #: 49
+    Reason: Expected an identifier and instead saw 'undefined' (a reserved word).
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 54
+    Char #: 52
+    Reason: Use the array literal notation [].
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 66
+    Char #: 43
+    Reason: Use the array literal notation [].
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 126
+    Char #: 38
+    Reason: ['position'] is better written in dot notation.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 126
+    Char #: 50
+    Reason: Expected '===' and instead saw '=='.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 152
+    Char #: 37
+    Reason: Unexpected 'in'. Compare with undefined, or use the hasOwnProperty method instead.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 175
+    Char #: 7
+    Reason: Move the invocation into the parens that contain the function.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 186
+    Char #: 27
+    Reason: Unexpected 'in'. Compare with undefined, or use the hasOwnProperty method instead.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 215
+    Char #: 18
+    Reason: Unexpected '~'.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 215
+    Char #: 20
+    Reason: Expected 'String' and instead saw ''''.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 224
+    Char #: 15
+    Reason: Move 'var' declarations to the top of the function.
+
+
+assets/phantomjs-1.5.0/examples/modernizr.js
+    Line #: 224
+    Char #: 15
+    Reason: Stopping.  (20% scanned).
+
+
+assets/phantomjs-1.5.0/examples/netsniff.js
+    Line #: 4
+    Char #: 73
+    Reason: Expected ';' and instead saw '}'.
+
+
+assets/phantomjs-1.5.0/examples/netsniff.js
+    Line #: 12
+    Char #: 6
+    Reason: Expected ';' and instead saw '}'.
+
+
+assets/phantomjs-1.5.0/examples/outputEncoding.js
+    Line #: 11
+    Char #: 6
+    Reason: Move 'var' declarations to the top of the function.
+
+
+assets/phantomjs-1.5.0/examples/outputEncoding.js
+    Line #: 11
+    Char #: 6
+    Reason: Stopping.  (64% scanned).
+
+
+assets/phantomjs-1.5.0/examples/render_multi_url.js
+    Line #: 31
+    Char #: 19
+    Reason: Only properties should be deleted.
+
+
+assets/phantomjs-1.5.0/examples/run-jasmine.js
+    Line #: 16
+    Char #: 42
+    Reason: Use the || operator.
+
+
+assets/phantomjs-1.5.0/examples/run-jasmine.js
+    Line #: 22
+    Char #: 60
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/run-jasmine.js
+    Line #: 31
+    Char #: 52
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/run-jasmine.js
+    Line #: 31
+    Char #: 76
+    Reason: Expected an assignment or function call and instead saw an expression.
+
+
+assets/phantomjs-1.5.0/examples/run-jasmine.js
+    Line #: 36
+    Char #: 2
+    Reason: Unexpected ';'.
+
+
+assets/phantomjs-1.5.0/examples/run-qunit.js
+    Line #: 16
+    Char #: 42
+    Reason: Use the || operator.
+
+
+assets/phantomjs-1.5.0/examples/run-qunit.js
+    Line #: 22
+    Char #: 60
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/run-qunit.js
+    Line #: 31
+    Char #: 52
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/run-qunit.js
+    Line #: 31
+    Char #: 76
+    Reason: Expected an assignment or function call and instead saw an expression.
+
+
+assets/phantomjs-1.5.0/examples/run-qunit.js
+    Line #: 36
+    Char #: 2
+    Reason: Unexpected ';'.
+
+
+assets/phantomjs-1.5.0/examples/sleepsort.js
+    Line #: 12
+    Char #: 51
+    Reason: Expected an assignment or function call and instead saw an expression.
+
+
+assets/phantomjs-1.5.0/examples/sleepsort.js
+    Line #: 14
+    Char #: 10
+    Reason: Don't make functions within a loop.
+
+
+assets/phantomjs-1.5.0/examples/tweets.js
+    Line #: 31
+    Char #: 18
+    Reason: Move 'var' declarations to the top of the function.
+
+
+assets/phantomjs-1.5.0/examples/tweets.js
+    Line #: 31
+    Char #: 18
+    Reason: Stopping.  (81% scanned).
+
+
+assets/phantomjs-1.5.0/examples/waitfor.js
+    Line #: 14
+    Char #: 42
+    Reason: Use the || operator.
+
+
+assets/phantomjs-1.5.0/examples/waitfor.js
+    Line #: 20
+    Char #: 60
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/waitfor.js
+    Line #: 29
+    Char #: 52
+    Reason: eval is evil.
+
+
+assets/phantomjs-1.5.0/examples/waitfor.js
+    Line #: 29
+    Char #: 76
+    Reason: Expected an assignment or function call and instead saw an expression.
+
+
+assets/phantomjs-1.5.0/examples/waitfor.js
+    Line #: 34
+    Char #: 2
+    Reason: Unexpected ';'.
+
+
+assets/phantomjs-1.5.0/examples/weather.js
+    Line #: 33
+    Char #: 17
+    Reason: Function statements should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.
+
+
+assets/phantomjs-1.5.0/examples/weather.js
+    Line #: 38
+    Char #: 18
+    Reason: Unexpected ';'.
+
+
+assets/phantomjs-1.5.0/examples/weather.js
+    Line #: 48
+    Char #: 22
+    Reason: Move 'var' declarations to the top of the function.
+
+
+assets/phantomjs-1.5.0/examples/weather.js
+    Line #: 48
+    Char #: 22
+    Reason: Stopping.  (81% scanned).
+
+

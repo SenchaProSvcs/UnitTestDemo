@@ -43,7 +43,7 @@ describe('ChicagoMeetup.view.Events', function() {
                 var testUrl = 'http://www.sencha.com';
 
                 expect(typeof eventGrid.linkRenderer).toEqual('function');
-                expect(typeof eventGrid.linkRenderer(testUrl)).toEqual('function'); //THIS SHOULD FAIL!
+                expect(typeof eventGrid.linkRenderer(testUrl)).toEqual('function'); //THIS SHOULD FAIL! We should have written toEqual('string')
 
                 //TODO: more robust regular expression checks to ensure this is *actually* an HTML link tag, correctly formatted
             });

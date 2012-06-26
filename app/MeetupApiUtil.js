@@ -31,11 +31,15 @@ Ext.define('ChicagoMeetup.MeetupApiUtil', {
     },
 
     /* JSLint should tell us it doesn't like this method... */
-    dummyMethod : function() {
+    dummyMethod : function () {
         var test = 0;
 
-        if (test) { return true; }
-        else { return false; } // <-- specifically this line...
+        if (test) {
+            return true;
+        }
+        else { // <-- specifically this block...
+            return false;
+        }
     },
 
     /**
@@ -67,7 +71,7 @@ Ext.define('ChicagoMeetup.MeetupApiUtil', {
             group_urlname : this.groupId,
             format        : 'json',
             page          : 200,
-            before : '12m'
+            before        : '12m'
         });
 
         return 'http://api.meetup.com/events?' + queryString;

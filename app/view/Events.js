@@ -15,7 +15,8 @@ Ext.define('ChicagoMeetup.view.Events', {
             columns : [
                 {
                     dataIndex : 'date',
-                    text      : 'Date'
+                    text      : 'Date',
+                    width     : 200
                 },
                 {
                     dataIndex : 'name',

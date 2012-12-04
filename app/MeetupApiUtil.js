@@ -75,5 +75,24 @@ Ext.define('ChicagoMeetup.MeetupApiUtil', {
         });
 
         return 'http://api.meetup.com/events?' + queryString;
+    },
+
+    /**
+     *
+     * @param eventId
+     * @return {String}
+     */
+    getRsvpsUrl : function (eventId) {
+        var queryString = Ext.Object.toQueryString({
+            sign     : true,
+            key      : this.apiKey,
+            event_id : eventId,
+            order    : 'event',
+            rsvp     : 'yes',
+            format   : 'json',
+            page     : 200
+        });
+
+        return 'http://api.meetup.com/2/rsvps?' + queryString;
     }
 });

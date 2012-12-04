@@ -6,6 +6,10 @@ Ext.application({
     autoCreateViewport: true,
     name: 'ChicagoMeetup',
 
+    controllers : [
+        'Event'
+    ],
+
     requires : [
         'ChicagoMeetup.MeetupApiUtil'
     ]

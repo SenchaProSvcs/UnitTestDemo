@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+
+Siesta 1.1.5
+Copyright(c) 2009-2012 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/products/siesta/license
+
+*/
+<span id='Siesta-Test-Function'>/**
+</span>@class Siesta.Test.Function
+
+This is a mixin, with helper methods for testing functionality relating to DOM elements. This mixin is consumed by {@link Siesta.Test}
+
+*/
+Role('Siesta.Test.Function', {
+    
+    methods : {
+<span id='Siesta-Test-Function-method-isCalled'>         /**
+</span>         * This assertion passes if the function is called at least one time during the test life span.
+         * 
+         * @param {Function/String} fn The function itself or the name of the function on the host object (2nd argument)
+         * @param {Object} host The &quot;owner&quot; of the method
+         * @param {String} desc The description of the assertion.
+         */
+        isCalled : function(fn, obj, desc) {
+            this.isCalledNTimes(fn, obj, 1, desc, true);
+        },
+
+<span id='Siesta-Test-Function-method-isCalledNTimes'>        /**
+</span>         * This assertion passes if the function is called exactly (n) times during the test life span.
+         * 
+         * @param {Function/String} fn The function itself or the name of the function on the host object (2nd argument)
+         * @param {Object} host The &quot;owner&quot; of the method
+         * @param {Number} n The expected number of calls
+         * @param {String} desc The description of the assertion.
+         */
+        isCalledNTimes : function(fn, obj, n, desc, isGreaterEqual) {
+            var me      = this,
+                prop    = typeof fn === &quot;string&quot; ? fn : me.getPropertyName(obj, fn);
+            desc = desc ? (desc + ' ') : '';
+
+            this.on('beforetestfinalizeearly', function () {
+                if (counter === n || (isGreaterEqual &amp;&amp; counter &gt; n)) {
+                    me.pass(desc || (prop + ' method was called exactly ' + n + ' times'));
+                } else {
+                    me.fail(desc || prop, {
+                        assertionName       : 'isCalledNTimes ' + prop, 
+                        got                 : counter, 
+                        need                : n ,
+                        needDesc            : (&quot;Need &quot; + (isGreaterEqual ? 'at least ' : 'exactly '))
+                    });
+                }
+            });
+
+            var counter = 0;
+            fn = obj[prop];
+            obj[prop] = function () { counter++; fn.apply(obj, arguments); };
+        },
+
+<span id='Siesta-Test-Function-method-isntCalled'>        /**
+</span>         * This assertion passes if the function is not called during the test life span.
+         * 
+         * @param {Function/String} fn The function itself or the name of the function on the host object (2nd argument)
+         * @param {Object} host The &quot;owner&quot; of the method
+         * @param {Number} n The expected number of calls
+         * @param {String} desc The description of the assertion.
+         */
+        isntCalled : function(fn, obj, desc) {
+            this.isCalledNTimes(fn, obj, 0, desc);
+        },
+
+        getPropertyName : function(host, obj) {
+            for (var o in host) {
+                if (host[o] === obj) return o;
+            }
+        }
+    }
+});
+</pre>
+</body>
+</html>

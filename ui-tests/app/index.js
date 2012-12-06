@@ -15,6 +15,10 @@ Harness.start(
             {
                 title : 'Test tabs for data in grids',
                 url : 'tests/01_tabs.js'
+            },
+            {
+                title : 'Test double-click functionality',
+                url : 'tests/02_RsvpWindow.js'
             }
         ]
     }

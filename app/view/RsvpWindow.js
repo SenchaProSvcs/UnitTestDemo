@@ -1,5 +1,6 @@
 Ext.define('ChicagoMeetup.view.RsvpWindow', {
     extend : 'Ext.window.Window',
+    xtype  : 'rsvpwindow',
 
     requires : [
         'Ext.grid.Panel'

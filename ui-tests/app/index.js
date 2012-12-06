@@ -3,7 +3,12 @@ var Harness = Siesta.Harness.Browser;
 Harness.configure({
     title     : 'Sencha UI Test Demo - Application Tests',
     
-    hostPageUrl: '../../index.html'
+    hostPageUrl: '../../index.html',
+
+    preload : [
+        '../../resources/sinon-1.5.2.js',
+        'api_stub.js'
+    ]
 });
 
 

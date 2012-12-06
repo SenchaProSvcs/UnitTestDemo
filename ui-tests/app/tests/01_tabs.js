@@ -21,11 +21,10 @@ StartTest(function(t) {
             next();
         },
 
-        { waitFor : 500 }, //try to give the Meetup.com API time to return... see note below
 
         function(next) {
             t.diag('Test that each grid contains data.');
-            t.diag('NOTE: WE SHOULD BE MOCKING THE API HERE... SEE BLOG ARTICLE FOR DETAILS');
+            t.diag('NOTE: WE ARE MOCKING THE API HERE... SEE BLOG ARTICLE FOR DETAILS');
 
             t.isGreater(upcomingEvents.getStore().getCount(), 0, 'Should be more than zero upcoming events');
             t.isGreater(pastEvents.getStore().getCount(), 0, 'Should be more than zero past events');

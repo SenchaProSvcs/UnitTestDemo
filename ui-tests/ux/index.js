@@ -20,7 +20,11 @@ Harness.start(
                 url : 'tests/01_RsvpWindow.js',
 
                 alsoPreload : [
-                    '../../app/view/RsvpWindow.js'
+                    '../../app/view/RsvpWindow.js',
+                    '../../app/model/Rsvp.js',
+                    '../../app/store/Rsvps.js',
+                    '../../resources/sinon-1.5.2.js',
+                    'api_stub.js'
                 ]
             }
         ]

@@ -1,16 +1,27 @@
 StartTest(function (t) {
 
-    var defaultWin = Ext.create('ChicagoMeetup.view.RsvpWindow', {
-        //default configs
+    var defaultWin = Ext.create('ChicagoMeetup.view.RsvpWindow');
+
+    //the grid's store is usually assigned in the controller... we'll do it manually in order to test the grid
+    var store = Ext.create('ChicagoMeetup.store.Rsvps', {
+        autoLoad : true,
+        proxy    : {
+            type             : 'jsonp',
+            autoAppendParams : false,
+            pageParam        : undefined,
+            url              : 'http://sencha.com/dummy/url',
+
+            reader : {
+                type : 'json',
+                root : 'results'
+            }
+        }
     });
 
-    var customWin = Ext.create('ChicagoMeetup.view.RsvpWindow', {
-        modal  : false,
-        title  : 'Foobar Window',
-        height : 400,
-        width  : 200,
-        layout : 'card'
-    });
+    //manually assign the store to the grid
+    //NOTE: the API is being mocked in /ui-tests/ux/api_stub.js
+    var grid = defaultWin.down('grid');
+    grid.reconfigure(store);
 
     t.chain(
         function (next) {
@@ -28,45 +39,22 @@ StartTest(function (t) {
         },
 
         function (next) {
-            t.diag('Test the view\'s default configuration.');
+            t.diag('Test the grid\'s custom renderer.');
             next();
         },
 
         function (next) {
-            t.is(defaultWin.modal, true, 'RsvpWindow should be modal.');
-            t.is(defaultWin.title, 'RSVPs for the selected Meetup', 'RsvpWindow should have a title of "RSVPs for the selected Meetup".');
-            t.is(defaultWin.getHeight(), 300, 'RsvpWindow should be 300px tall.');
-            t.is(defaultWin.getWidth(), 300, 'RsvpWindow should be 300px wide.');
-            t.is(defaultWin.getLayout().type, 'fit', 'RsvpWindow should have "fit" layout.');
+            //I know there are only 2 rows in this grid because I mocked the API
+            var firstRow = Ext.get(grid.getView().getNode(0)),
+                secondRow = Ext.get(grid.getView().getNode(1));
 
-            t.diag('Remove the default RvpWindow.');
-            defaultWin.hide();
-            defaultWin.destroy();
+            var regExp = /^(<img)/g;
+            var innerHtml = firstRow.query('.x-grid-cell-inner')[1].innerHTML;
 
-            next();
-        },
+            t.is(regExp.test(innerHtml), true, 'First row should contain an image in the second column');
 
-        function (next) {
-            t.diag('Show the customized RvpWindow on the screen.');
-            customWin.show();
-
-            next();
-        },
-
-        { waitFor : 250 }, //allow time for any animations to complete
-
-        function (next) {
-            t.diag('Test the view\'s custom configuration.');
-
-            t.is(customWin.modal, false, 'RsvpWindow should be modal.');
-            t.is(customWin.title, 'Foobar Window', 'RsvpWindow should have a title of "Foobar Window".');
-            t.is(customWin.getHeight(), 400, 'RsvpWindow should be 300px tall.');
-            t.is(customWin.getWidth(), 200, 'RsvpWindow should be 300px wide.');
-            t.is(customWin.getLayout().type, 'card', 'RsvpWindow should have "card" layout.');
-
-            t.diag('Remove the custom RvpWindow.');
-            customWin.hide();
-            customWin.destroy();
+            innerHtml = secondRow.query('.x-grid-cell-inner')[1].innerHTML;
+            t.is(regExp.test(innerHtml), false, 'Second row should NOT contain an image in the second column');
 
             next();
         }

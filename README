@@ -5,7 +5,8 @@ Refer to the Sencha blog for more details:
   - https://www.sencha.com/blog/ui-testing-a-sencha-app
 
 Notes:
-  - Since the original post, I have replaced "PhantomLint" with "LintRoller" (under the new /syntax/ folder),
-    although the idea is exactly the same
+  - Since the original post, I have replaced "PhantomLint" with "LintRoller"
+    (under the new /syntax/ folder), although the idea is exactly the same
 
-  - Original version (discussed in the blog posts) is available on the "blog" branch of this repo
+  - Original version (discussed in the blog posts) is available on the
+    "blog" branch of this repo

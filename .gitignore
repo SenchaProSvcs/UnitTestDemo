@@ -1,3 +1,4 @@
 .DS_Store
 .idea/
 unit-tests/*-errors.txt
+syntax/error_log.txt

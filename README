@@ -2,3 +2,10 @@ An small example of unit testing an Ext JS application.
 
 Refer to the Sencha blog for more details:
   - http://www.sencha.com/blog/automating-unit-tests
+  - https://www.sencha.com/blog/ui-testing-a-sencha-app
+
+Notes:
+  - Since the original post, I have replaced "PhantomLint" with "LintRoller" (under the new /syntax/ folder),
+    although the idea is exactly the same
+
+  - Original version (discussed in the blog posts) is available on the "blog" branch of this repo

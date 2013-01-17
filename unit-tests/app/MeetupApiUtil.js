@@ -10,6 +10,14 @@ describe('ChicagoMeetup.MeetupApiUtil', function() {
             expect(typeof ChicagoMeetup.MeetupApiUtil.getUsersUrl()).toEqual('string');
         });
 
+        it('should correctly encode the event ID', function() {
+            var regExp = /event_id=12345/g;
+            var eventId = 12345;
+            var url = ChicagoMeetup.MeetupApiUtil.getUsersUrl(eventId);
+
+            expect(regExp.test(url)).toEqual(true);
+        });
+
     });
 
     describe('getPastEventsUrl() method', function() {
